@@ -1,9 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main()
-{
-    string s;
-    cin >> s;
-    cout << "hey " << s << endl;
 
+int main() {
+    int n = 0;
+    for (int i = 0; i<=10 ; i++)
+    {
+        for (int j =0 ; j<=i ; j++)
+        cout << '*';
+        cout <<endl;
+    }
+    
+    
 }
