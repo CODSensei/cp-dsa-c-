@@ -2,9 +2,14 @@
 using namespace std;
 
 int main(){
-    cout << sizeof(int)<<endl;
-    cout << sizeof(float)<<endl;
-    cout << sizeof(double)<<endl;
-    cout << sizeof(char)<<endl;
+    int x,y;
+    cin >> x >>y;
+    cout <<" Numbers before swap " << x << "\t"<<y<<endl;
+    int t = x;
+    x=y;
+    y=t;
+    cout <<" Numbers after swap " << x << "\t"<<y;
+     
+
 
 }
