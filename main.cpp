@@ -2,8 +2,10 @@
 using namespace std;
 
 int main(){
-   double x,y;
-   cin >> x >> y;
-   double z = x*1LL*y;
-   cout << z;
+    int x;
+    cin >> x;
+    if (x%2==0)
+    cout << "EVEN";
+    else 
+    cout << "ODD";
 }
