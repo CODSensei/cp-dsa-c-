@@ -1,2 +1,4 @@
-quotient is 0
-remainder is 9
+4
+4
+8
+1
