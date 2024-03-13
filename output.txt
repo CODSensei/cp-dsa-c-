@@ -1,1 +1,2 @@
-19
+quotient is 0
+remainder is 9
