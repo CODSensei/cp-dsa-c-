@@ -1,2 +1,1 @@
- Numbers before swap 9	10
- Numbers after swap 10	9
+65
