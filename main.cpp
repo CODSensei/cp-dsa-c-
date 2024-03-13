@@ -2,10 +2,10 @@
 using namespace std;
 
 int main(){
-    int x;
-    cin >> x;
-    if (x%2==0)
-    cout << "EVEN";
+    char c;
+    cin >> c;
+    if (c == 'a'||c=='e'||c=='i'||c=='o'||c=='u'||c == 'A'||c=='E'||c=='I'||c=='O'||c=='U')
+    cout << "Vowel" ;
     else 
-    cout << "ODD";
+    cout << "Consonent";
 }
