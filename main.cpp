@@ -2,10 +2,8 @@
 using namespace std;
 
 int main(){
-    char c;
-    cin >> c;
-    cout << (int)c;
-     
-
-
+   double x,y;
+   cin >> x >> y;
+   double z = x*1LL*y;
+   cout << z;
 }
