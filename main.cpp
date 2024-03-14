@@ -1,20 +1,28 @@
 #include<bits/stdc++.h>
+#include<math.h>
 using namespace std;
 
 int main(){
     int a,b,c;
+    cout << "Enter your coefficients" << endl;
     cin >> a>>b>>c;
-    if (a>b){
-        if (a>c)
-        cout << "Largest number is "<< a;
-        else
-        cout << "Largest number is "<< c;
+    int d = b*b - 4*a*c;
+    if (d<0){
+    cout << "Roots are imaginary" << endl;
+    }
+    else if (d==0)
+    {
+        int root = (-b)/2*a;
+        cout << "Roots are equal and real" << endl << "Root is " << root;
+        
     }
     else {
-        if (b>c)
-        cout << "Largest number is "<< b;
-        else
-        cout << "Largest number is "<< c;
+        int dis = sqrt(d);
+        int root1 = ((-b) + dis)/(2*a);
+        int root2 = ((-b) - dis)/(2*a);
+        cout << "Roots are real and unequal"<<endl << "Roots are " << root1 << "and" <<root2;
 
     }
+    
+    
 }
