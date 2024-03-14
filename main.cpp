@@ -1,28 +1,33 @@
-#include<bits/stdc++.h>
-#include<math.h>
+#include <iostream>
+#include <cmath>
 using namespace std;
-
-int main(){
-    int a,b,c;
-    cout << "Enter your coefficients" << endl;
-    cin >> a>>b>>c;
-    int d = b*b - 4*a*c;
-    if (d<0){
-    cout << "Roots are imaginary" << endl;
-    }
-    else if (d==0)
+int main()
+{
+    float a, b, c, x1, x2, discriminant, realPart, imaginaryPart;
+    cout << "Enter coefficients a, b and c: ";
+    cin >> a >> b >> c;
+    discriminant = b * b - 4 * a * c;
+    if (discriminant > 0)
     {
-        int root = (-b)/2*a;
-        cout << "Roots are equal and real" << endl << "Root is " << root;
-        
+        x1 = (-b + sqrt(discriminant)) / (2 * a);
+        x2 = (-b - sqrt(discriminant)) / (2 * a);
+        cout << "Roots are real and different." << endl;
+        cout << "x1 = " << x1 << endl;
+        cout << "x2 = " << x2 << endl;
     }
-    else {
-        int dis = sqrt(d);
-        int root1 = ((-b) + dis)/(2*a);
-        int root2 = ((-b) - dis)/(2*a);
-        cout << "Roots are real and unequal"<<endl << "Roots are " << root1 << "and" <<root2;
-
+    else if (discriminant == 0)
+    {
+        cout << "Roots are real and same." << endl;
+        x1 = -b / (2 * a);
+        cout << "x1 = x2 =" << x1 << endl;
     }
-    
-    
+    else
+    {
+        realPart = -b / (2 * a);
+        imaginaryPart = sqrt(-discriminant) / (2 * a);
+        cout << "Roots are complex and different." << endl;
+        cout << "x1 = " << realPart << "+" << imaginaryPart << "i" << endl;
+        cout << "x2 = " << realPart << "-" << imaginaryPart << "i" << endl;
+    }
+    return 0;
 }

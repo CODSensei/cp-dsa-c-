@@ -1,2 +1,3 @@
-Enter your coefficients
-Roots are imaginary
+Enter coefficients a, b and c: Roots are complex and different.
+x1 = -0.5+0.866025i
+x2 = -0.5-0.866025i
