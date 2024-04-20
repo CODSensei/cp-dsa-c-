@@ -1,17 +1,36 @@
-#include<bits/stdc++.h>
+#include <iostream>
+
 using namespace std;
 
-int F(int n){
-    if (n==1)
-    return 1;
-    else if (n==2)
-    return 1;
-    return F(n-1) + F(n-2);
-}
+int main()
+{
 
-int main() {
-    int n;
-    cin >> n;
-    if (n>=1 || n<=10000)
-        cout << F(n);
+    // Write your code here
+
+    int num , lastdigit;
+    int even = 0, odd = 0;
+    cin >> num;
+
+    while (num)
+    {
+
+        lastdigit = num % 10;
+
+        if (lastdigit % 2 == 0)
+        {
+
+            even = even + lastdigit;
+        }
+
+        else if (lastdigit % 2 != 0)
+
+        {
+
+            odd = odd + lastdigit;
+        }
+
+        num = num / 10;
+    }
+
+    cout << even << " " << odd;
 }
