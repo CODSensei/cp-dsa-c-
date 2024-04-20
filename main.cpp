@@ -1,36 +1,38 @@
 #include <iostream>
-
 using namespace std;
+int Maximum(int x, int y)
+{
+	// Write your code here.
+	if (x>y)
+		return x;
+	else 
+		return y;
+}
+void Swap(int &x, int &y)
+{
+	// Write your code here.
+	int temp = x;
+	x=y;
+	y=temp;
 
+}
 int main()
 {
-
-    // Write your code here
-
-    int num , lastdigit;
-    int even = 0, odd = 0;
-    cin >> num;
-
-    while (num)
-    {
-
-        lastdigit = num % 10;
-
-        if (lastdigit % 2 == 0)
-        {
-
-            even = even + lastdigit;
-        }
-
-        else if (lastdigit % 2 != 0)
-
-        {
-
-            odd = odd + lastdigit;
-        }
-
-        num = num / 10;
-    }
-
-    cout << even << " " << odd;
+	int test, a, b, r;
+	cin >> test;
+	cin >> a >> b;
+	switch (test)
+	{
+	case 1:
+		r = Maximum(a, b);
+		cout << r;
+		break;
+	case 2:
+		Swap(a, b);
+		cout << a << " " << b;
+		break;
+	default:
+		cout << "Invalid test option";
+	}
+	return 0;
 }
