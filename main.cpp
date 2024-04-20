@@ -1,20 +1,17 @@
-#include <iostream>
-#include <cmath>
+#include<bits/stdc++.h>
 using namespace std;
-int main()
-{
-   int year;
-   cin >> year;
-   if (year % 4 == 0) {
-if (year % 100 == 0) {
-if (year % 400 == 0)
-cout << year << " is a leap year.";
-else
-cout << year << " is not a leap year.";
+
+int F(int n){
+    if (n==1)
+    return 1;
+    else if (n==2)
+    return 1;
+    return F(n-1) + F(n-2);
 }
-else
-cout << year << " is a leap year.";
-}
-else
-cout << year << " is not a leap year.";
+
+int main() {
+    int n;
+    cin >> n;
+    if (n>=1 || n<=10000)
+        cout << F(n);
 }
