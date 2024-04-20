@@ -1,38 +1,47 @@
-#include <iostream>
-using namespace std;
-int Maximum(int x, int y)
-{
-	// Write your code here.
-	if (x>y)
-		return x;
-	else 
-		return y;
-}
-void Swap(int &x, int &y)
-{
-	// Write your code here.
-	int temp = x;
-	x=y;
-	y=temp;
+#include<iostream>
 
-}
-int main()
-{
-	int test, a, b, r;
-	cin >> test;
-	cin >> a >> b;
-	switch (test)
-	{
-	case 1:
-		r = Maximum(a, b);
-		cout << r;
-		break;
-	case 2:
-		Swap(a, b);
-		cout << a << " " << b;
-		break;
-	default:
-		cout << "Invalid test option";
-	}
-	return 0;
+#include<cmath>
+
+#include<vector>
+
+ 
+
+double areaSwitchCase(int ch, std::vector<double> a) {
+
+  double area = 0.0;
+
+ 
+
+  switch(ch){
+
+ 
+
+        case 1: {
+
+          double pi = M_PI;
+
+          area = pi * (a[0] * a[0]);
+
+          break;
+
+        }
+
+ 
+
+        case 2: {
+
+          area = a[0] * a[1];
+
+          break;
+
+        }
+
+        default:
+
+          std::cout<< "Incvalid choice\n";
+
+        }
+
+        return area;
+
 }
