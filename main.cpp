@@ -9,9 +9,9 @@ void nTriangle(int n);
 void nTriangle(int n) {
 	// Write your code here
 	if (n>=1 || n<=25){
-		for (int i = 0 ; i<n; i++){
-			for (int j=0 ; j<=i ; j++)
-			cout << i+1 << " ";
+		for (int i = n ; i>0; i--){
+			for (int j=i ; j>0 ; j--)
+			cout << "*" << " ";
 			cout << "\n";
 		}
 	}
